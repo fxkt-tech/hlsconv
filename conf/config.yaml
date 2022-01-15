@@ -1,0 +1,4 @@
+codec:
+  ffmpeg_cmd: ffmpeg
+  hls_time: 2
+  hls_keyinfo_file: lib/file.keyinfo

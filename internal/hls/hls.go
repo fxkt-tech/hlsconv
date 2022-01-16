@@ -21,8 +21,8 @@ func TranscodeHls(infile, outfolder string, c *conf.Config) error {
 		input.I(infile),
 	))
 	ff.AddOutput(output.New(
-		output.VideoCoder(codec.VideoX264),
-		output.AudioCoder(codec.Copy),
+		output.VideoCodec(codec.Copy),
+		output.AudioCodec(codec.Copy),
 		output.Map(filter.SelectStream(0, filter.StreamVideo, true)),
 		output.Map(filter.SelectStream(0, filter.StreamAudio, false)),
 		output.File(outfolder+"m.m3u8"),

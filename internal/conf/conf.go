@@ -1,7 +1,8 @@
 package conf
 
 import (
-	"io/ioutil"
+	"io"
+	"os"
 
 	"gopkg.in/yaml.v3"
 )
@@ -17,13 +18,18 @@ type Codec struct {
 }
 
 func Init(conf string) (*Config, error) {
-	fbytes, err := ioutil.ReadFile(conf)
+	f, err := os.Open(conf)
+	if err != nil {
+		return nil, err
+	}
+
+	bs, err := io.ReadAll(f)
 	if err != nil {
 		return nil, err
 	}
 
 	var bc Config
-	err = yaml.Unmarshal(fbytes, &bc)
+	err = yaml.Unmarshal(bs, &bc)
 	if err != nil {
 		return nil, err
 	}

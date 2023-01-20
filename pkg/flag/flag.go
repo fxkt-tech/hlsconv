@@ -4,12 +4,12 @@ import (
 	syserrors "errors"
 	"flag"
 
-	"fxkt.tech/hlsconv/internal/errors"
-	"fxkt.tech/hlsconv/pkg/file"
+	"github.com/fxkt-tech/hlsconv/internal/errors"
+	"github.com/fxkt-tech/hlsconv/pkg/file"
 )
 
 type Flags struct {
-	Input     string //input
+	Input     string // input
 	Output    string // output
 	ConfFile  string // config file path.
 	Recursion bool   // deal folder by rectusion.

@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"log"
 
-	"fxkt.tech/hlsconv/internal/conf"
-	"fxkt.tech/hlsconv/internal/errors"
-	"fxkt.tech/hlsconv/internal/hls"
-	"fxkt.tech/hlsconv/pkg/file"
-	"fxkt.tech/hlsconv/pkg/flag"
+	"github.com/fxkt-tech/hlsconv/internal/conf"
+	"github.com/fxkt-tech/hlsconv/internal/errors"
+	"github.com/fxkt-tech/hlsconv/internal/hls"
+	"github.com/fxkt-tech/hlsconv/pkg/file"
+	"github.com/fxkt-tech/hlsconv/pkg/flag"
 )
 
 func main() {
